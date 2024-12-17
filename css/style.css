@@ -74,13 +74,11 @@ h6 {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
   grid-template-areas:
-    "sidebar  header  header  header"
-    "sidebar  main    main    announcement"
-    "sidebar  main    main    announcement"
-    "sidebar  main    main    announcement";
+    "sidebar  header"
+    "sidebar  main";
 }
 
 .sidebar {
@@ -93,8 +91,4 @@ h6 {
 
 .main {
   grid-area: main;
-}
-
-.announcement {
-  grid-area: announcement;
 }
