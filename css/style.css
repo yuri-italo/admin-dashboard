@@ -1,6 +1,37 @@
 :root {
-  --primary-color: #e2e8f0;
-  --secondary-color: #1992d4;
+  --font-size-xxs: 0.625rem; /* 10px */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-md: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem; /* 36px */
+  --font-size-5xl: 3rem; /* 48px */
+  --font-size-6xl: 3.75rem; /* 60px */
+  --font-size-7xl: 4.5rem; /* 72px */
+  --font-size-8xl: 6rem; /* 96px */
+  --font-size-9xl: 8rem; /* 128px */
+  --font-color-0: #ffffff;
+  --font-color-50: #f0f9ff;
+  --font-color-100: #e0f2fe;
+  --font-color-200: #bae6fd;
+  --font-color-300: #7dd3fc;
+  --font-color-400: #38bdf8;
+  --font-color-500: #0ea5e9;
+  --font-color-600: #0284c7;
+  --font-color-700: #0369a1;
+  --font-color-800: #075985;
+  --font-color-900: #0c4a6e;
+  --font-color-950: #082f49;
+  --gutter-xxl: 96px; /* Extra-extra large */
+  --gutter-xl: 80px; /* Extra large */
+  --gutter-lg: 64px; /* Large */
+  --gutter-md: 40px; /* Medium */
+  --gutter-sm: 24px; /* Small */
+  --gutter-xs: 16px; /* Extra small */
+  --gutter-xxs: 8px; /* Extra-extra small */
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -73,6 +104,12 @@ h6 {
 }
 
 .container {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: var(--font-color-0);
+  font-weight: bold;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 4fr;
@@ -82,7 +119,32 @@ h6 {
 }
 
 .sidebar {
+  background-color: var(--font-color-500);
   grid-area: sidebar;
+}
+
+.sidebar-container {
+  display: grid;
+  gap: var(--gutter-md);
+  padding: var(--gutter-xs);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--gutter-xxs);
+}
+
+.logo .mdi {
+  font-size: var(--font-size-5xl);
+}
+
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--gutter-xxs);
+  gap: var(--gutter-xs);
 }
 
 .header {
